@@ -12,6 +12,13 @@ pdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
 # --- UIの改善：タイトルと余白の調整 ---
 st.title("英単語テスト楽々作成ツール")
 st.markdown("テスト問題と解答の2枚組をワンクリックで作成！")
+# --- UIの改善：右上のメニューを隠す ---
+hide_menu_style = """
+    <style>
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 # --- ステップ1：設定エリア ---
 st.subheader("出題形式とタイトルの設定")
